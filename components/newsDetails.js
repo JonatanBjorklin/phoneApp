@@ -10,7 +10,7 @@ const newsDetails = ({ route }) => {
     const getDetailedNews = async () => {
       try {
         const resp = await axios.get(`https://newsapi.org/v2/top-headlines?sources=${news.id}&apiKey=90bbee7dd73f462f938cad226de85049&language=en`);
-        setDetailedNews(resp.data.articles[0]); // Assuming you want to display the first article related to the selected source
+        setDetailedNews(resp.data.articles[0]);
       } catch (error) {
         console.error('Error fetching detailed news data:', error);
       }
